@@ -11,6 +11,10 @@ let body = document.querySelector('body');
 let valueInputText;
 let valueInputRange;
 
+buttonInsideSquare.style.display = 'none';
+
+rangeSpan.textContent = 50 + '%';
+
 const getTextFromInput = function (e) {
   valueInputText = e.target.value;
 };
@@ -21,13 +25,11 @@ const getRangeFromInput = function (e) {
     circle.style.height = e.target.value + '%';
     rangeSpan.textContent = e.target.value + '%';
   }
-  console.log(e.target.value);
 };
 
 const buttonEvent = function () {
-  console.log('Отработка');
   square.style.backgroundColor = valueInputText;
-  buttonInsideSquare.style.display = 'none';
+
 };
 
 inputRange.addEventListener('input', getRangeFromInput);
